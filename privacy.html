@@ -5,93 +5,85 @@
   <title>Livio – Datenschutzerklärung &amp; Impressum</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-    body { font-family: -apple-system, system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1.25rem; color: #222; line-height: 1.6; }
-    h1 { font-size: 1.75rem; margin-bottom: 0.2rem; }
-    h2 { font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #e5e5e5; padding-bottom: 0.25rem; }
-    h3 { font-size: 1rem; margin-top: 1.4rem; margin-bottom: 0.2rem; color: #444; }
-    p, li { font-size: 0.96rem; }
-    ul { padding-left: 1.4rem; }
-    li { margin-bottom: 0.25rem; }
-    a { color: #0066cc; }
-    .legal-box { background: #f5f5f7; border-radius: 10px; padding: 1rem 1.2rem; margin-top: 0.6rem; font-size: 0.95rem; line-height: 1.7; }
-    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e5e5e5; font-size: 0.85rem; color: #888; }
+    :root { --bg:#f8fafc; --surface:#fff; --line:#dbe5f2; --text:#0f172a; --muted:#475569; --brand:#2563eb; --soft:#dbeafe; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .container { max-width:980px; margin:0 auto; padding:0 1.25rem; }
+    .site-header { position:sticky; top:0; backdrop-filter:blur(12px); background:rgba(248,250,252,.9); border-bottom:1px solid var(--line); }
+    .header-inner { min-height:72px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .logo { text-decoration:none; color:var(--text); font-weight:800; }
+    .nav { display:flex; gap:.5rem; flex-wrap:wrap; }
+    .nav a { text-decoration:none; color:var(--muted); padding:.5rem .8rem; border-radius:999px; font-weight:600; font-size:.94rem; }
+    .nav a.active { color:var(--brand); background:var(--soft); }
+    .nav a:hover { background:#eef4ff; color:var(--text); }
+    main { padding:2.2rem 0 4rem; }
+    .card { background:var(--surface); border:1px solid var(--line); border-radius:20px; padding:1.5rem; margin-top:1rem; }
+    h1 { margin:.2rem 0 .5rem; font-size:2rem; }
+    h2 { font-size:1.2rem; margin-top:2rem; }
+    h3 { margin-top:1.5rem; font-size:1.05rem; color:#1e293b; }
+    p, li { color:#1e293b; }
+    .muted { color:var(--muted); }
+    ul { padding-left:1.3rem; }
+    a { color:var(--brand); }
+    .legal-box { background:#f8fbff; border:1px solid var(--line); border-radius:12px; padding:1rem 1.2rem; margin-top:.6rem; }
+    footer { margin-top:2rem; border-top:1px solid var(--line); padding-top:1rem; color:var(--muted); font-size:.9rem; }
   </style>
 </head>
 <body>
-  <h1>Datenschutzerklärung &amp; Impressum – Livio</h1>
-  <p><em>Stand: 19. Mai 2026</em></p>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./index.html">Livio</a>
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="./index.html">Start</a>
+        <a href="./support.html">Support</a>
+        <a class="active" href="./privacy.html">Datenschutz &amp; Impressum</a>
+      </nav>
+    </div>
+  </header>
 
-  <p>Diese Datenschutzerklärung beschreibt, welche Daten die App <strong>Livio</strong> verarbeitet und wie wir mit ihnen umgehen.</p>
+  <main class="container">
+    <h1>Datenschutzerklärung &amp; Impressum – Livio</h1>
+    <p class="muted"><em>Stand: 19. Mai 2026</em></p>
 
-  <!-- ── IMPRESSUM ────────────────────────────────────── -->
-  <h2>Impressum</h2>
+    <section class="card">
+      <p>Diese Datenschutzerklärung beschreibt, welche Daten die App <strong>Livio</strong> verarbeitet und wie wir mit ihnen umgehen.</p>
+      <h2>Impressum</h2>
+      <h3>Angaben gemäß § 5 TMG</h3>
+      <div class="legal-box">ENKL-NET GmbH<br>Borromäusstr. 59<br>66663 Merzig<br>Deutschland</div>
+      <h3>Vertreten durch</h3>
+      <div class="legal-box">Geschäftsführer: Philipp Wörister</div>
+      <h3>Kontakt</h3>
+      <div class="legal-box">E-Mail: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a></div>
+      <h3>Registereintrag</h3>
+      <div class="legal-box">Handelsregisternummer: HRB 106587<br>Registergericht: Amtsgericht Saarbrücken</div>
+      <h3>Umsatzsteuer</h3>
+      <div class="legal-box">Steuernummer: 040 / 108 / 66869<br>Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: DE332721379</div>
 
-  <h3>Angaben gemäß § 5 TMG</h3>
-  <div class="legal-box">
-    ENKL-NET GmbH<br>
-    Borromäusstr. 59<br>
-    66663 Merzig<br>
-    Deutschland
-  </div>
+      <h2>Verantwortlicher (Datenschutz)</h2>
+      <p>ENKL-NET GmbH · Borromäusstr. 59 · 66663 Merzig<br>E-Mail: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a></p>
+      <h2>Welche Daten verarbeitet Livio?</h2>
+      <p>Livio verarbeitet ausschließlich die Daten, die du selbst in der App eingibst – Aufgaben, Hausarbeiten, Einkaufslisten, Rezepte, Haushaltsmitglieder und zugehörige Eigenschaften.</p>
+      <p>Diese Daten werden lokal auf deinem Gerät gespeichert und über deinen persönlichen iCloud-Account synchronisiert. Sie liegen verschlüsselt im privaten iCloud-Speicher.</p>
+      <h2>iCloud-Synchronisation</h2>
+      <p>Livio nutzt Apples CloudKit, um deine Daten zwischen deinen Geräten zu synchronisieren und – wenn du es ausdrücklich startest – mit anderen Apple-IDs zu teilen, die du selbst einlädst.</p>
+      <p>Wir, ENKL-NET GmbH, haben zu keinem Zeitpunkt Zugriff auf deine iCloud-Daten. Diese liegen ausschließlich in deinem iCloud-Konto bei Apple. Es gibt kein zusätzliches Backend auf unseren Servern.</p>
+      <h2>Welche Daten geben wir an Dritte weiter?</h2>
+      <p>Keine. Wir geben keinerlei Nutzerdaten an Dritte weiter. Wir betreiben keine Analyse-Tools, kein Tracking, keine Werbung.</p>
+      <h2>Berechtigungen</h2>
+      <ul>
+        <li><strong>Mitteilungen</strong>: für Erinnerungen morgens, mittags und abends. Optional.</li>
+        <li><strong>Kalender</strong>: nur, wenn du eine Aufgabe in den Kalender eintragen lässt. Optional.</li>
+        <li><strong>iCloud</strong>: für die Synchronisation zwischen Geräten und Sharing mit Familie. Optional, aber erforderlich für Sync und Sharing.</li>
+      </ul>
+      <h2>Deine Rechte</h2>
+      <p>Du kannst alle in Livio gespeicherten Daten jederzeit löschen, indem du sie in der App entfernst oder die App deinstallierst. Beim Deinstallieren werden die lokalen Daten entfernt; die iCloud-Daten kannst du über die iOS-Einstellungen unter „Apple-ID → iCloud → iCloud-Speicher verwalten → Livio" löschen.</p>
+      <h2>Kontakt Datenschutz</h2>
+      <p>Für Fragen zum Datenschutz: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a></p>
+      <h2>Änderungen dieser Erklärung</h2>
+      <p>Wir aktualisieren diese Erklärung, wenn sich die App weiterentwickelt. Maßgeblich ist immer die zuletzt veröffentlichte Version unter dieser URL.</p>
+    </section>
 
-  <h3>Vertreten durch</h3>
-  <div class="legal-box">
-    Geschäftsführer: Philipp Wörister
-  </div>
-
-  <h3>Kontakt</h3>
-  <div class="legal-box">
-    E-Mail: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a>
-  </div>
-
-  <h3>Registereintrag</h3>
-  <div class="legal-box">
-    Handelsregisternummer: HRB 106587<br>
-    Registergericht: Amtsgericht Saarbrücken
-  </div>
-
-  <h3>Umsatzsteuer</h3>
-  <div class="legal-box">
-    Steuernummer: 040 / 108 / 66869<br>
-    Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: DE332721379
-  </div>
-
-  <!-- ── DATENSCHUTZ ──────────────────────────────────── -->
-  <h2>Verantwortlicher (Datenschutz)</h2>
-  <p>
-    ENKL-NET GmbH · Borromäusstr. 59 · 66663 Merzig<br>
-    E-Mail: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a>
-  </p>
-
-  <h2>Welche Daten verarbeitet Livio?</h2>
-  <p>Livio verarbeitet ausschließlich die Daten, die du selbst in der App eingibst – Aufgaben, Hausarbeiten, Einkaufslisten, Rezepte, Haushaltsmitglieder und zugehörige Eigenschaften.</p>
-  <p>Diese Daten werden lokal auf deinem Gerät gespeichert und über deinen persönlichen iCloud-Account synchronisiert. Sie liegen verschlüsselt im privaten iCloud-Speicher.</p>
-
-  <h2>iCloud-Synchronisation</h2>
-  <p>Livio nutzt Apples CloudKit, um deine Daten zwischen deinen Geräten zu synchronisieren und – wenn du es ausdrücklich startest – mit anderen Apple-IDs zu teilen, die du selbst einlädst.</p>
-  <p>Wir, ENKL-NET GmbH, haben zu keinem Zeitpunkt Zugriff auf deine iCloud-Daten. Diese liegen ausschließlich in deinem iCloud-Konto bei Apple. Es gibt kein zusätzliches Backend auf unseren Servern.</p>
-
-  <h2>Welche Daten geben wir an Dritte weiter?</h2>
-  <p>Keine. Wir geben keinerlei Nutzerdaten an Dritte weiter. Wir betreiben keine Analyse-Tools, kein Tracking, keine Werbung.</p>
-
-  <h2>Berechtigungen</h2>
-  <ul>
-    <li><strong>Mitteilungen</strong>: für Erinnerungen morgens, mittags und abends. Optional.</li>
-    <li><strong>Kalender</strong>: nur, wenn du eine Aufgabe in den Kalender eintragen lässt. Optional.</li>
-    <li><strong>iCloud</strong>: für die Synchronisation zwischen Geräten und Sharing mit Familie. Optional, aber erforderlich für Sync und Sharing.</li>
-  </ul>
-
-  <h2>Deine Rechte</h2>
-  <p>Du kannst alle in Livio gespeicherten Daten jederzeit löschen, indem du sie in der App entfernst oder die App deinstallierst. Beim Deinstallieren werden die lokalen Daten entfernt; die iCloud-Daten kannst du über die iOS-Einstellungen unter „Apple-ID → iCloud → iCloud-Speicher verwalten → Livio" löschen.</p>
-
-  <h2>Kontakt Datenschutz</h2>
-  <p>Für Fragen zum Datenschutz: <a href="mailto:woerister@icloud.com">woerister@icloud.com</a></p>
-
-  <h2>Änderungen dieser Erklärung</h2>
-  <p>Wir aktualisieren diese Erklärung, wenn sich die App weiterentwickelt. Maßgeblich ist immer die zuletzt veröffentlichte Version unter dieser URL.</p>
-
-  <footer>
-    &copy; 2026 ENKL-NET GmbH &nbsp;·&nbsp; <a href="./support.html">Support</a>
-  </footer>
+    <footer>&copy; 2026 ENKL-NET GmbH · <a href="./support.html">Support</a></footer>
+  </main>
 </body>
 </html>
