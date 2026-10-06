@@ -1,50 +1,30 @@
-# Livio – Legal / Support Pages
+# Livio – Website (Support, Datenschutz, Impressum)
 
-Dieser Ordner enthält die statischen HTML-Seiten für **Privacy Policy** und **Support**, die für die App-Store-Einreichung von Livio gehostet werden müssen.
+Statische Website der App **Livio** (ENKL-NET GmbH). Sie wird für die App-Store-Einreichung benötigt:
 
-## Dateien
+| Datei | Zweck | App Store Connect |
+|---|---|---|
+| `index.html` | Startseite | Marketing-URL (optional) |
+| `support.html` | Support und FAQ | Support-URL |
+| `privacy.html` | Datenschutzerklärung | Privacy-Policy-URL |
+| `impressum.html` | Impressum (§ 5 DDG) | – |
+| `style.css` | gemeinsames Styling (inkl. Dark Mode) | – |
+| `favicon.svg`, `404.html` | Icon, Fehlerseite | – |
 
-- `privacy.html` – Datenschutzerklärung (URL muss in ASC unter „Privacy Policy URL" eingetragen werden)
-- `support.html` – Support-Seite (URL muss in ASC unter „Support URL" eingetragen werden)
-- `index.html` – einfache Übersichtsseite, die auf beide verlinkt
+Es gibt keinen Build-Schritt: Dateien bearbeiten, committen, pushen. Header und Footer stehen in jeder HTML-Datei; bei Änderungen an der Navigation alle Seiten anpassen.
 
-## Vor dem Hosten ausfüllen
+## Hosting
 
-In allen drei HTML-Dateien gibt es Platzhalter in `[eckigen Klammern]`. Such und ersetz:
+GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / `(root)`**.
+Die resultierende URL (`https://<user>.github.io/Livio/`) bzw. eine eigene Domain trägst du in App Store Connect ein. Die Datenschutzerklärung nennt GitHub Pages als Hoster; wird anders gehostet, muss der Abschnitt „Hosting dieser Website“ angepasst werden.
 
-- `[Anschrift einfügen]` / `[Adresse einfügen]` → Postanschrift der ENKL-NET GmbH
-- `[Support-Adresse einfügen]` → Support-E-Mail (z. B. `support@enkl-net.de`)
-- `[E-Mail einfügen]` → Kontakt-E-Mail (kann die gleiche sein)
+## Qualitätssicherung
 
-Datum unten in `privacy.html` ggf. anpassen, falls du was am Wortlaut änderst.
+`.github/workflows/check.yml` prüft bei jedem Push/PR: keine Platzhalter wie `[… einfügen]`, keine kaputten internen Links, valides HTML/CSS.
 
-## Hosting via GitHub Pages (kostenlos, ~5 Minuten)
+## Checkliste bei jedem App-Release
 
-1. Auf GitHub einen neuen öffentlichen Repo anlegen, z. B. `livio-legal`.
-2. Die drei HTML-Dateien aus diesem Ordner committen und pushen.
-3. Im Repo unter **Settings → Pages**:
-   - Source: **Deploy from a branch**
-   - Branch: `main`, folder: `/ (root)`
-   - Save
-4. Nach 1–2 Minuten erreichbar unter `https://<dein-user>.github.io/livio-legal/`.
-5. URLs für App Store Connect:
-   - Privacy: `https://<dein-user>.github.io/livio-legal/privacy.html`
-   - Support: `https://<dein-user>.github.io/livio-legal/support.html`
-
-## Hosting via Notion (Alternative, noch schneller)
-
-1. Notion → neue Seite „Livio Datenschutz" → Inhalt einfügen → **Share → Publish to web**.
-2. Gleiches Vorgehen für eine Support-Seite.
-3. Die beiden public URLs in ASC eintragen.
-
-(Notion macht aus dem HTML kein 1:1, du kannst aber den Text aus den HTML-Dateien als Markdown aufbereiten.)
-
-## Hosting auf eigener Domain
-
-Wenn ENKL-NET eine Website mit eigenem Webspace hat, einfach die drei HTML-Dateien per FTP/SFTP hochladen, z. B. nach `https://enkl-net.de/livio/`.
-
-## Wartung
-
-- Bei jedem App-Update prüfen, ob die Datenschutzerklärung noch stimmt (z. B. neue Berechtigungen, neue Datenkategorien).
-- Datum in `privacy.html` aktualisieren, wenn der Inhalt sich ändert.
-- Die App-Store-Connect-Pflicht zur Privacy Policy URL bleibt für jedes Release bestehen.
+- [ ] Stimmen Berechtigungen und Datenkategorien noch mit `privacy.html` überein (und mit Privacy Manifest und App-Store-Datenschutzangaben)?
+- [ ] Stimmen Menünamen und Schritte in den FAQ auf `support.html` noch mit der App überein?
+- [ ] „Stand“-Datum in `privacy.html` aktualisiert, falls der Text geändert wurde?
+- [ ] URLs in App Store Connect erreichbar?
