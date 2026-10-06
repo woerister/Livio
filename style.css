@@ -139,7 +139,7 @@ li { margin-bottom: 0.35rem; }
   border: 1px solid var(--line);
 }
 .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
-@media (prefers-color-scheme: dark) { .btn.primary { color: #0b1220; } }
+@media (prefers-color-scheme: dark) { .btn.primary, .skip-link { color: #0b1220; } }
 .btn.secondary { color: var(--text); background: var(--surface-soft); }
 
 .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; margin-top: 1.25rem; }
