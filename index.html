@@ -2,100 +2,47 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>Livio</title>
+  <title>Livio – Familienorganisation für Apple-Geräte</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style>
-    :root {
-      --bg: #f5f8ff;
-      --surface: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --line: #dbe5f2;
-      --brand: #2563eb;
-      --brand-soft: #dbeafe;
-      --shadow: 0 20px 40px -28px rgba(15, 23, 42, 0.45);
-    }
-
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 20% 0%, #e9f1ff 0%, #f5f8ff 40%, #f8fafc 100%);
-    }
-
-    .container { max-width: 980px; margin: 0 auto; padding: 0 1.25rem; }
-
-    .site-header {
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(12px);
-      background: rgba(245, 248, 255, 0.8);
-      border-bottom: 1px solid var(--line);
-      z-index: 10;
-    }
-
-    .header-inner { display: flex; align-items: center; justify-content: space-between; min-height: 72px; gap: 1rem; }
-    .logo { font-weight: 800; letter-spacing: 0.01em; text-decoration: none; color: var(--text); font-size: 1.15rem; }
-    .nav { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-    .nav a {
-      text-decoration: none;
-      color: var(--muted);
-      padding: 0.5rem 0.8rem;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 0.94rem;
-      border: 1px solid transparent;
-    }
-    .nav a:hover { background: #eef4ff; color: var(--text); }
-    .nav a.active { color: var(--brand); background: var(--brand-soft); border-color: #bfdbfe; }
-
-    main { padding: 4rem 0 5rem; }
-
-    .hero {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: var(--shadow);
-      padding: 2.5rem 2rem;
-      text-align: center;
-    }
-    h1 { margin: 0; font-size: clamp(2rem, 4vw, 3rem); }
-    .subtitle { margin: 1rem auto 0; max-width: 620px; color: var(--muted); font-size: 1.1rem; line-height: 1.7; }
-    .cta-row { margin-top: 1.7rem; display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap; }
-    .btn {
-      padding: 0.72rem 1.05rem;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.95rem;
-      border: 1px solid var(--line);
-    }
-    .btn.primary { background: var(--brand); color: #fff; border-color: var(--brand); }
-    .btn.secondary { color: var(--text); background: #f8fbff; }
-  </style>
+  <meta name="description" content="Livio hilft Familien, Aufgaben, Haushalt, Einkauf und Rezepte an einem Ort zu organisieren – synchron über iCloud, ohne Tracking.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="./index.html">Livio</a>
       <nav class="nav" aria-label="Hauptnavigation">
-        <a class="active" href="./index.html">Start</a>
+        <a href="./index.html" aria-current="page">Start</a>
         <a href="./support.html">Support</a>
-        <a href="./privacy.html">Datenschutz &amp; Impressum</a>
+        <a href="./privacy.html">Datenschutz</a>
+        <a href="./impressum.html">Impressum</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
+  <main id="inhalt" class="container">
     <section class="hero">
       <h1>Familienorganisation, modern gedacht.</h1>
-      <p class="subtitle">Livio hilft euch, Aufgaben, Haushalt, Einkauf und Rezepte an einem Ort zu organisieren – schnell, klar und synchron auf allen Geräten.</p>
+      <p class="subtitle">Livio hilft euch, Aufgaben, Haushalt, Einkauf und Rezepte an einem Ort zu organisieren – schnell, klar und synchron auf all euren Apple-Geräten.</p>
       <div class="cta-row">
         <a class="btn primary" href="./support.html">Zum Support</a>
         <a class="btn secondary" href="./privacy.html">Datenschutz lesen</a>
       </div>
     </section>
+
+    <section class="features" aria-label="Funktionen">
+      <div class="card"><h2>Aufgaben &amp; Haushalt</h2><p>Hausarbeiten und To-dos übersichtlich verteilen und im Blick behalten.</p></div>
+      <div class="card"><h2>Einkauf &amp; Rezepte</h2><p>Einkaufslisten und Rezepte gemeinsam pflegen.</p></div>
+      <div class="card"><h2>Sync &amp; Teilen</h2><p>Über iCloud auf deinen Geräten synchron und mit deiner Familie teilbar.</p></div>
+      <div class="card"><h2>Privat by Design</h2><p>Kein eigenes Backend, kein Tracking, keine Werbung.</p></div>
+    </section>
+    <footer>
+      &copy; 2026 ENKL-NET GmbH &middot; <a href="./support.html">Support</a> &middot; <a href="./privacy.html">Datenschutz</a> &middot; <a href="./impressum.html">Impressum</a>
+    </footer>
   </main>
 </body>
 </html>
